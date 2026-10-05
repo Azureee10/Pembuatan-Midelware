@@ -1,0 +1,120 @@
+.dashboard-panel {
+    background: rgba(255, 255, 255, 0.96);
+    border: 1px solid #e5e7eb;
+    border-radius: 1.25rem;
+    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.05);
+    overflow: hidden;
+}
+
+.dashboard-panel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.2rem 1.5rem;
+    border-bottom: 1px solid #e5e7eb;
+    background: linear-gradient(180deg, rgba(249, 250, 251, 0.9), rgba(255, 255, 255, 0.9));
+}
+
+.dashboard-panel-title {
+    margin: 0;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #111827;
+}
+
+.dashboard-add-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.7rem 1.1rem;
+    border-radius: 0.8rem;
+    border: 1px solid #4f46e5;
+    background: linear-gradient(135deg, #4f46e5 0%, #4338ca 100%);
+    color: #ffffff;
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 8px 18px rgba(79, 70, 229, 0.25);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dashboard-add-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 22px rgba(79, 70, 229, 0.32);
+}
+
+.dashboard-table-wrap {
+    overflow-x: auto;
+}
+
+.dashboard-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+}
+
+.dashboard-table thead th {
+    background: #f9fafb;
+    color: #4b5563;
+    font-size: 0.74rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 1rem 1.25rem;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.dashboard-table tbody td {
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid #eef2f7;
+    color: #374151;
+    font-size: 0.95rem;
+}
+
+.dashboard-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.dashboard-table tbody tr:hover {
+    background: #f9fafb;
+}
+
+.dashboard-status {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.35rem 0.8rem;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 700;
+}
+
+.dashboard-status.active {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.dashboard-status.inactive {
+    background: #e5e7eb;
+    color: #374151;
+}
+
+.dashboard-empty {
+    text-align: center;
+    color: #6b7280;
+    padding: 2.5rem 1rem;
+    font-size: 1rem;
+}
+
+@media (max-width: 640px) {
+    .dashboard-panel-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .dashboard-add-btn {
+        width: 100%;
+    }
+}

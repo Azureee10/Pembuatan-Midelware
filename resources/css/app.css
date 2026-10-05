@@ -1,0 +1,10 @@
+@import './dashboard-layout.css';
+@import './dashboard-table.css';
+@import './role-dashboards.css';
+@import './buyer-catalog.css';
+@import './storefront.css';
+@import './owner-product-batch.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

@@ -1,0 +1,241 @@
+.owner-batch-form {
+    display: grid;
+    gap: 1rem;
+    color: #202825;
+}
+
+.owner-batch-heading,
+.owner-batch-row-heading,
+.owner-batch-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.owner-batch-heading h1 {
+    margin: 0;
+    color: #202825;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.owner-batch-add,
+.owner-batch-footer button {
+    display: inline-flex;
+    min-height: 2.65rem;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
+    border: 0;
+    border-radius: 0.25rem;
+    background: #bd533e;
+    padding: 0.65rem 0.95rem;
+    color: #fff;
+    font-size: 0.84rem;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.owner-batch-add:hover,
+.owner-batch-footer button:hover {
+    background: #a74432;
+}
+
+.owner-batch-add:disabled {
+    background: #9aa19d;
+    cursor: not-allowed;
+}
+
+.owner-batch-add span {
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 0.8;
+}
+
+.owner-batch-errors {
+    border-left: 3px solid #b42318;
+    background: #fff1ef;
+    padding: 0.85rem 1rem;
+    color: #8b2118;
+    font-size: 0.85rem;
+}
+
+.owner-batch-errors ul {
+    margin: 0.4rem 0 0;
+    padding-left: 1.25rem;
+}
+
+.owner-batch-rows {
+    display: grid;
+    gap: 0.8rem;
+}
+
+.owner-batch-row {
+    border: 1px solid #dce1dd;
+    border-top: 3px solid #202825;
+    background: #fff;
+    padding: 1.1rem;
+}
+
+.owner-batch-row-heading {
+    margin-bottom: 1rem;
+}
+
+.owner-batch-row-heading h2 {
+    margin: 0;
+    color: #202825;
+    font-size: 0.95rem;
+    font-weight: 800;
+}
+
+.owner-batch-remove {
+    border: 0;
+    background: transparent;
+    padding: 0.35rem 0;
+    color: #a74432;
+    font-size: 0.8rem;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.owner-batch-remove:disabled {
+    color: #9aa19d;
+    cursor: not-allowed;
+}
+
+.owner-batch-fields {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.85rem;
+}
+
+.owner-batch-field {
+    display: grid;
+    min-width: 0;
+    align-content: start;
+    gap: 0.35rem;
+}
+
+.owner-batch-field-name {
+    grid-column: span 2;
+}
+
+.owner-batch-field-description {
+    grid-column: span 3;
+}
+
+.owner-batch-field label {
+    color: #414b45;
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+
+.owner-batch-field input,
+.owner-batch-field textarea {
+    width: 100%;
+    min-height: 2.55rem;
+    border: 1px solid #ccd4ce;
+    border-radius: 0.2rem;
+    background: #fff;
+    padding: 0.55rem 0.65rem;
+    color: #202825;
+    font: inherit;
+    font-size: 0.84rem;
+}
+
+.owner-batch-field textarea {
+    min-height: 2.55rem;
+    resize: vertical;
+}
+
+.owner-batch-field input:focus,
+.owner-batch-field textarea:focus {
+    border-color: #bd533e;
+    outline: 0;
+    box-shadow: 0 0 0 3px rgba(189, 83, 62, 0.12);
+}
+
+.owner-batch-active {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    margin-top: 0.85rem;
+    color: #414b45;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.owner-batch-active input {
+    width: 1rem;
+    height: 1rem;
+    accent-color: #bd533e;
+}
+
+.owner-batch-footer {
+    justify-content: flex-end;
+    padding-top: 0.25rem;
+}
+
+.owner-batch-footer a {
+    color: #65706a;
+    font-size: 0.84rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.owner-batch-footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 760px) {
+    .owner-batch-fields {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .owner-batch-field-description {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 520px) {
+    .owner-batch-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .owner-batch-heading h1 {
+        font-size: 1.5rem;
+    }
+
+    .owner-batch-add {
+        width: 100%;
+    }
+
+    .owner-batch-row {
+        padding: 0.85rem;
+    }
+
+    .owner-batch-fields {
+        grid-template-columns: 1fr;
+    }
+
+    .owner-batch-field-name,
+    .owner-batch-field-description {
+        grid-column: auto;
+    }
+
+    .owner-batch-footer {
+        align-items: stretch;
+        flex-direction: column-reverse;
+    }
+
+    .owner-batch-footer button {
+        width: 100%;
+    }
+
+    .owner-batch-footer a {
+        text-align: center;
+    }
+}
